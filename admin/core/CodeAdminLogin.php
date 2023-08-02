@@ -51,3 +51,56 @@ if (isset($_POST['deleteUser'])) {
         header('Location: /index.php?pages=users&action=list');
     }
 }
+
+// Thêm khóa học
+if (isset($_POST['addCourse'])) {
+    $name =  mysqli_real_escape_string($conn, $_POST['name']);
+    $image = $_FILES['image']['name'];
+    $image_tmp = $_FILES['image']['tmp_name'];
+    $price =  mysqli_real_escape_string($conn, $_POST['price']);
+    $description =  mysqli_real_escape_string($conn, $_POST['description']);
+
+    $targetDirectory = "../uploads/"; // Thay đổi đường dẫn tùy theo thư mục lưu trữ của bạn
+
+    $targetPath = $targetDirectory . $image;
+    move_uploaded_file($image_tmp, $targetPath);
+
+    if (!empty($name) or !empty($image) or !empty($price) or !empty($description)) {
+        $query_course = mysqli_query($conn, "INSERT INTO courses (name, image, price, description) VALUES ('$name', '$image', '$price', '$description')");
+        header('Location: /index.php?pages=product&action=list');
+    } else {
+    }
+}
+
+// Xóa khóa học
+
+if (isset($_POST['updateCourse'])) {
+    $course_id =  mysqli_real_escape_string($conn, $_POST['course_id']);
+    $name =  mysqli_real_escape_string($conn, $_POST['name']);
+    $image =  mysqli_real_escape_string($conn, $_POST['image']);
+    $price =  mysqli_real_escape_string($conn, $_POST['price']);
+    $description =  mysqli_real_escape_string($conn, $_POST['description']);
+
+
+    $query_course = mysqli_query($conn, "UPDATE courses SET name='$name',image='$image', price='$price', description='$description'  WHERE id= $course_id");
+    if ($query_course) {
+        header('Location: /index.php?pages=product&action=list');
+    }
+}
+
+// Xóa khóa học
+
+if (isset($_POST['deleteCourse'])) {
+    $course_id = mysqli_real_escape_string($conn, $_POST['deleteCourse']);
+
+    $query = "SELECT image FROM courses WHERE id = $course_id";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
+    $imagePath = $row['image'];
+
+    $query = "DELETE FROM courses WHERE id = $course_id";
+    $sql = mysqli_query($conn, $query);
+    if ($sql) {
+        header('Location: /index.php?pages=product&action=list');
+    }
+}
