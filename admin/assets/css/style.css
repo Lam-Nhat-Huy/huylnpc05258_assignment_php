@@ -1,0 +1,17 @@
+.navbar-vertical.navbar-expand-xs .navbar-nav .nav-link:hover {
+  color: #cb0c9f !important;
+}
+.fa-pencil-alt:before {
+  font-size: 12px;
+  content: "\f303";
+}
+.fa-trash-alt:before {
+  font-size: 12px;
+  content: "\f2ed";
+}
+.saveUser {
+  margin-right: 10px;
+}
+.info-admin {
+  color: #cb0c9f;
+}
