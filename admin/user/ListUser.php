@@ -42,8 +42,8 @@
                                     <td><?= $fetch_user['username'] ?></td>
                                     <td><?= $fetch_user['email'] ?></td>
                                     <td class="d-flex justify-content-evenly">
-                                        <a href="./index.php?pages=users&action=edit?id=<?= $fetch_user['id'] ?>" class="btn btn-success btn-sm"><i class="fas fa-pencil-alt"></i></a>
-                                        <form action="code.php" method="post">
+                                        <a href="./index.php?pages=users&action=edit&id=<?= $fetch_user['id'] ?>" class="btn btn-success btn-sm"><i class="fas fa-pencil-alt"></i></a>
+                                        <form action="./admin/core/CodeAdminLogin.php" method="post">
                                             <button onclick="return confirm('Bạn có chắc chắn muốn xóa? ')" type="submit" class="btn btn-danger btn-sm" name="deleteUser" value="<?= $fetch_user['id'] ?>"><i class="fas fa-trash-alt"></i>
                                             </button>
                                         </form>

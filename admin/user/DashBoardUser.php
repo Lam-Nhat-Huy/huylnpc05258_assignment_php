@@ -27,7 +27,7 @@
             <p class="card-text">
             <h5><strong><?php echo $countUsers; ?></strong></h5>
             </p>
-            <a href="./user.php " class="btn btn-primary">Kiểm tra</a>
+            <a href="/index.php?pages=users&action=list" class="btn btn-primary">Kiểm tra</a>
         </div>
     </div>
 </div>
@@ -48,7 +48,7 @@
             <p class="card-text">
             <h5><strong><?php echo $countUsers; ?></strong></h5>
             </p>
-            <a href="./user.php " class="btn btn-primary">Kiểm tra</a>
+            <a href="/index.php?pages=users&action=list" class="btn btn-primary">Kiểm tra</a>
         </div>
     </div>
 </div>
