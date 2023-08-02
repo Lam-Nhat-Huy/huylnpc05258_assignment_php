@@ -13,11 +13,14 @@ if (isset($_GET['pages'])) {
 
         case 'users':
             switch ($_GET['action']) {
+                case 'dashboard':
+                    include './admin/user/DashBoardUser.php';
+                    break;
                 case 'list':
                     include './admin/user/ListUser.php';
                     break;
                 case 'add':
-                    include './admin/user/AddUserphp';
+                    include './admin/user/AddUser.php';
                     break;
                 case 'edit':
                     include './admin/user/EditUser.php';
@@ -37,7 +40,7 @@ if (isset($_GET['pages'])) {
                     include './admin/product/ListProduct.php';
                     break;
                 case 'add':
-                    include './admin/product/AddProductphp';
+                    include './admin/product/AddProduct.php';
                     break;
                 case 'edit':
                     include './admin/product/EditProduct.php';
@@ -57,7 +60,7 @@ if (isset($_GET['pages'])) {
                     include './admin/category/ListCategory.php';
                     break;
                 case 'add':
-                    include './admin/category/AddCategoryphp';
+                    include './admin/category/AddCategory.php';
                     break;
                 case 'edit':
                     include './admin/category/EditCategory.php';

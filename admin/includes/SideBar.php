@@ -14,7 +14,7 @@
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder ">Quản Lý Trang Chủ </h6>
             </div>
             <li class="nav-item">
-                <a class="nav-link" href="../model/index.php">
+                <a class="nav-link" href="./index.php?pages=users&action=dashboard">
                     <span class="nav-link-text ms-1">Bảng Điều Khiển</span>
                 </a>
             </li>
@@ -23,7 +23,7 @@
                 <h2 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder ">Quản Lý Tài Khoản</h2>
             </div>
             <li class="nav-item">
-                <a class="nav-link  " href="../model/user.php">
+                <a class="nav-link  " href="./index.php?pages=users&action=list">
                     <span class="nav-link-text ms-1">Tài Khoản Của Tôi</span>
                 </a>
             </li>
@@ -31,7 +31,7 @@
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder ">Quản Lý Sản Phẩm</h6>
             </div>
             <li class="nav-item">
-                <a class="nav-link  " href="../model/course.php">
+                <a class="nav-link  " href="./index.php?pages=product&action=list">
                     <span class="nav-link-text ms-1">Danh Sách Khóa Học</span>
                 </a>
             </li>

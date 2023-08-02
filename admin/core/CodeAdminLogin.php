@@ -28,7 +28,7 @@ if (isset($_POST['loginUser'])) {
     if (mysqli_num_rows($select) > 0) {
         $row = mysqli_fetch_assoc($select);
         $_SESSION['user_id'] = $row['id'];
-        header('Location: /index.php?pages=users&action=list');
+        header('Location: /index.php?pages=users&action=dashboard');
     } else {
         header('Location: ../login.php');
     }
