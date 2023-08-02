@@ -7,6 +7,9 @@ if (isset($_GET['pages'])) {
         case 'login':
             include './admin/login.php';
             break;
+        case 'register':
+            include './admin/register.php';
+            break;
 
         case 'users':
             switch ($_GET['action']) {
