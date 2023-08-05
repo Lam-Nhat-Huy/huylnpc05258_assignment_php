@@ -1,0 +1,22 @@
+Bước 1: chạy file login.php
+
+Bước 2: đăng ký tài khoản mới
+
+Trang admin có chức năng:
+- Thêm sửa xóa users
+- Thêm sửa xóa khóa học
+- Có chức năng upload ảnh từ bất kỳ thư mục nào trong máy
+- Có chức năng đếm số lượng khóa học và user
+- Hiển thị tên người dùng theo username đăng nhập
+
+
+Trang product có chức năng: 
+- Đăng ký / đăng nhập
+- Lưu thông tin giỏ hàng theo từng tài khoản
+- Hiển thị khóa học từ database
+- Thêm khóa học vào giỏ hàng
+- Xóa khóa học khỏi giỏ hàng
+- có trang thanh toán khóa học tính phí
+
+
+* Trên thanh navbar mục Khóa học, Hỗ trợ, Liên hệ chưa hỗ trợ
