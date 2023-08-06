@@ -59,14 +59,15 @@ if (isset($_POST['addCourse'])) {
     $image_tmp = $_FILES['image']['tmp_name'];
     $price =  mysqli_real_escape_string($conn, $_POST['price']);
     $description =  mysqli_real_escape_string($conn, $_POST['description']);
+    $category_id =  mysqli_real_escape_string($conn, $_POST['category_id']);
 
     $targetDirectory = "../uploads/"; // Thay đổi đường dẫn tùy theo thư mục lưu trữ của bạn
 
     $targetPath = $targetDirectory . $image;
     move_uploaded_file($image_tmp, $targetPath);
 
-    if (!empty($name) or !empty($image) or !empty($price) or !empty($description)) {
-        $query_course = mysqli_query($conn, "INSERT INTO courses (name, image, price, description) VALUES ('$name', '$image', '$price', '$description')");
+    if (!empty($name) or !empty($image) or !empty($price) or !empty($description) or !empty($category_id)) {
+        $query_course = mysqli_query($conn, "INSERT INTO courses (name, image, price, description, category_id) VALUES ('$name', '$image', '$price', '$description', '$category_id')");
         header('Location: /index.php?pages=product&action=list');
     } else {
     }
@@ -101,5 +102,34 @@ if (isset($_POST['deleteCourse'])) {
     $sql = mysqli_query($conn, $query);
     if ($sql) {
         header('Location: /index.php?pages=product&action=list');
+    }
+}
+
+
+// Thêm phân loại
+if (isset($_POST['addCategory'])) {
+    $category_name = mysqli_real_escape_string($conn, $_POST['category_name']);
+    $category_note = mysqli_real_escape_string($conn, $_POST['category_note']);
+
+    $query_category = mysqli_query($conn, "INSERT INTO category (category_name, category_note) VALUES ('$category_name', '$category_note')");
+
+    if ($query_category) {
+        header("Location: /index.php?pages=category&action=list");
+    } else {
+        header("Location: /index.php?pages=category&action=add");
+    }
+}
+
+// chỉnh sửa phân loại
+
+
+if (isset($_POST['updateCategory'])) {
+    $category_id =  mysqli_real_escape_string($conn, $_POST['category_id']);
+    $category_name =  mysqli_real_escape_string($conn, $_POST['category_name']);
+    $category_note =  mysqli_real_escape_string($conn, $_POST['category_note']);
+
+    $query_course = mysqli_query($conn, "UPDATE category SET category_name='$category_name', category_note = '$category_note'  WHERE id= $category_id");
+    if ($query_course) {
+        header('Location: /index.php?pages=category&action=list');
     }
 }

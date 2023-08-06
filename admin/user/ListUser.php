@@ -37,7 +37,7 @@
                         if (mysqli_num_rows($select_user) > 0) {
                             while ($fetch_user = mysqli_fetch_array($select_user)) {
                         ?>
-                                <tr>
+                                <tr style="vertical-align: middle;">
                                     <td><?= $fetch_user['id'] ?></td>
                                     <td><?= $fetch_user['username'] ?></td>
                                     <td><?= $fetch_user['email'] ?></td>

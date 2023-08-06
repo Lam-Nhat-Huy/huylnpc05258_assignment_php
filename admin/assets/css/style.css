@@ -15,3 +15,18 @@
 .info-admin {
   color: #cb0c9f;
 }
+/*# sourceMappingURL=dashboard-free.css.map */
+.navbar-vertical.navbar-expand-xs .navbar-collapse {
+  display: block;
+  overflow: auto;
+}
+/*# sourceMappingURL=dashboard-free.css.map */
+.navbar-vertical.navbar-expand-xs .navbar-collapse {
+  display: block;
+  overflow: auto;
+  height: 500px;
+}
+.td-width {
+  width: 500px !important;
+  white-space: normal !important;
+}

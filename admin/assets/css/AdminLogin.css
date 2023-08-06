@@ -305,3 +305,6 @@ body {
     height: 200px;
   }
 }
+.td-width {
+  white-space: normal !important;
+}

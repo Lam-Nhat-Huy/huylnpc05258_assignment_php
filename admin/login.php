@@ -1,7 +1,7 @@
 <?php include('./includes/HeaderAdminLogin.php'); ?>
 <div class="form-container" style="background-image: url('../admin/assets/images/background2.jpg');">
 
-    <form action="./core/CodeAdminLogin.php" method="post">
+    <form action="./core/CodeAdminLogin.php" method="post" class="needs-validation was-validated">
         <h3>Đăng Nhập</h3>
         <input type="email" name="email" required placeholder="Nhập đầy đủ email" class="box">
         <input type="password" name="password" required placeholder="Nhập đầy đủ mật khẩu" class="box">

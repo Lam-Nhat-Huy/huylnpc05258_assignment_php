@@ -35,6 +35,12 @@
                     <span class="nav-link-text ms-1">Danh Sách Khóa Học</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link  " href="./index.php?pages=category&action=list">
+                    <span class="nav-link-text ms-1">Phân Loại Khóa Học</span>
+                </a>
+            </li>
+
             <div class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder ">Quản Lý Dịch Vụ</h6>
             </div>

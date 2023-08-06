@@ -38,6 +38,22 @@
                         <label for="">Mô Tả: </label>
                         <input type="text" class="form-control" name="description">
                     </div>
+                    <div class="col-md-12 mb-5">
+                        <label class="form-label">Thể loại</label>
+                        <select class="form-select" name="category_id" required aria-label=".form-select-sm example">
+                            <?php
+                            $select_category_id = mysqli_query($conn, "SELECT * FROM category");
+                            if (mysqli_num_rows($select_category_id) > 0) {
+                                while ($row = mysqli_fetch_array($select_category_id)) {
+                            ?>
+                                    <option value="<?= $row['id'] ?>"><?= $row['category_name'] ?> </option>
+                            <?php
+                                }
+                            }
+                            ?>
+                        </select>
+
+                    </div>
                     <div class="mb-3">
                         <button type="submit" name="addCourse" class="btn btn-primary">Thêm</button>
                     </div>
