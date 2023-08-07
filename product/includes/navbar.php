@@ -62,22 +62,34 @@
                                 <div class="col-md-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <form action="./code.php" method="post">
+                                            <form action="./code.php" method="post" class="needs-validation was-validated">
                                                 <div class="mb-3">
                                                     <label for="">Họ tên: </label>
-                                                    <input type="text" class="form-control" name="name">
+                                                    <input type="text" class="form-control" name="name" required>
+                                                    <div class="invalid-feedback">
+                                                        Họ tên không được để trống.
+                                                    </div>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="">Email: </label>
-                                                    <input type="email" class="form-control" name="email">
+                                                    <input type="email" class="form-control" name="email" required>
+                                                    <div class="invalid-feedback">
+                                                        Email không được để trống.
+                                                    </div>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="">Mật Khẩu: </label>
-                                                    <input type="password" class="form-control" name="password">
+                                                    <input type="password" class="form-control" name="password" required>
+                                                    <div class="invalid-feedback">
+                                                        Mật khẩu không được để trống.
+                                                    </div>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="">Nhập Lại Mật Khẩu: </label>
-                                                    <input type="password" class="form-control" name="cpassword">
+                                                    <input type="password" class="form-control" name="cpassword" required>
+                                                    <div class="invalid-feedback">
+                                                        Nhập lại mật khẩu không được để trống.
+                                                    </div>
                                                 </div>
                                                 <button type="submit" name="registerUser" class="btn btn-primary float-end">Đăng Ký</button>
                                             </form>
@@ -108,14 +120,20 @@
                                 <div class="col-md-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <form action="./code.php" method="post">
+                                            <form action="./code.php" method="post" class="needs-validation was-validated">
                                                 <div class="mb-3">
                                                     <label for="">Email: </label>
-                                                    <input type="email" class="form-control" name="email">
+                                                    <input type="email" class="form-control" name="email" required>
+                                                    <div class="invalid-feedback">
+                                                        Email không được để trống.
+                                                    </div>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="">Mật Khẩu: </label>
-                                                    <input type="password" class="form-control" name="password">
+                                                    <input type="password" class="form-control" name="password" required>
+                                                    <div class="invalid-feedback">
+                                                        Mật khẩu không được để trống.
+                                                    </div>
                                                 </div>
                                                 <button type="submit" name="loginUser" class="btn btn-primary float-end">Đăng Nhập</button>
                                             </form>

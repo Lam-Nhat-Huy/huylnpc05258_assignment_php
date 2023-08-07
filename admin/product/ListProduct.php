@@ -51,7 +51,7 @@
                                     <td class="td-width"><?= $fetch_course['description'] ?></td>
                                     <td><?= $fetch_course['category_name'] ?></td>
 
-                                    <td class="d-flex justify-content-evenly">
+                                    <td class="d-flex justify-content-evenly ">
                                         <a href="./index.php?pages=product&action=edit&id=<?= $fetch_course['id'] ?>" class="btn btn-success btn-sm"><i class="fas fa-pencil-alt"></i>
                                         </a>
 

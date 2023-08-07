@@ -21,22 +21,34 @@
                 </h4>
             </div>
             <div class="card-body">
-                <form action="./admin/core/CodeAdminLogin.php" method="post" enctype="multipart/form-data">
+                <form action="./admin/core/CodeAdminLogin.php" method="post" enctype="multipart/form-data" class="needs-validation was-validated">
                     <div class="mb-3">
-                        <label for="">Tên Khóa Học: </label>
-                        <input type="text" class="form-control" name="name">
+                        <label for="username">Tên Khóa Học: </label>
+                        <input type="text" class="form-control" name="name" required>
+                        <div class="invalid-feedback">
+                            Sản phẩm không được để trống.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="">Hình Ảnh: </label>
-                        <input type="file" class="form-control" name="image">
+                        <input type="file" class="form-control" name="image" required>
+                        <div class="invalid-feedback">
+                            Hình ảnh không được để trống.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="">Giá: </label>
-                        <input type="text" class="form-control" name="price">
+                        <input type="text" class="form-control" name="price" required>
+                        <div class="invalid-feedback">
+                            Giá không không được để trống.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="">Mô Tả: </label>
-                        <input type="text" class="form-control" name="description">
+                        <input type="text" class="form-control" name="description" required>
+                        <div class="invalid-feedback">
+                            Mô tả không được để trống.
+                        </div>
                     </div>
                     <div class="col-md-12 mb-5">
                         <label class="form-label">Thể loại</label>

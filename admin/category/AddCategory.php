@@ -21,14 +21,20 @@
                 </h4>
             </div>
             <div class="card-body">
-                <form action="./admin/core/CodeAdminLogin.php" method="post">
+                <form action="./admin/core/CodeAdminLogin.php" method="post" class="needs-validation was-validated">
                     <div class="mb-3">
                         <label for="">Phân loại: </label>
-                        <input type="text" class="form-control" name="category_name">
+                        <input type="text" class="form-control" name="category_name" required>
+                        <div class="invalid-feedback">
+                            Phân loại không được để trống.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="">Ghi chú: </label>
-                        <input type="text" class="form-control" name="category_note">
+                        <input type="text" class="form-control" name="category_note" required>
+                        <div class="invalid-feedback">
+                            Ghi chú không được để trống.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <button type="submit" name="addCategory" class="btn btn-primary">Thêm</button>
