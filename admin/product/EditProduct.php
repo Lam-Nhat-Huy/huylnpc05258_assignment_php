@@ -54,7 +54,7 @@
                                 if (mysqli_num_rows($select_category_id) > 0) {
                                     while ($row = mysqli_fetch_array($select_category_id)) {
                                 ?>
-                                        <option value="<?= $row['id'] ?>"><?= $row['category_name'] ?> </option>
+                                        <option value="<?= $row['id'] ?>"><?= $row['category_name'] ?></option>
                                 <?php
                                     }
                                 }
