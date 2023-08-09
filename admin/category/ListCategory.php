@@ -35,7 +35,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        $select_category = mysqli_query($conn, "SELECT * FROM category ");
+                        $select_category = mysqli_query($conn, "SELECT * FROM category");
                         if (mysqli_num_rows($select_category) > 0) {
                             while ($row = mysqli_fetch_array($select_category)) {
                         ?>

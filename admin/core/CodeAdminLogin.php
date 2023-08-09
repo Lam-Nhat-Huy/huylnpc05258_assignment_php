@@ -81,8 +81,10 @@ if (isset($_POST['updateCourse'])) {
     $image =  mysqli_real_escape_string($conn, $_POST['image']);
     $price =  mysqli_real_escape_string($conn, $_POST['price']);
     $description =  mysqli_real_escape_string($conn, $_POST['description']);
+    $category_id =  mysqli_real_escape_string($conn, $_POST['category_id']);
 
-    $query_course = mysqli_query($conn, "UPDATE courses SET name='$name',image='$image', price='$price', description='$description'  WHERE id= $course_id");
+
+    $query_course = mysqli_query($conn, "UPDATE courses SET `name`='$name',`image`='$image', `price`='$price', `description`='$description', `category_id` = '$category_id' WHERE id= $course_id");
     if ($query_course) {
         header('Location: /index.php?pages=product&action=list');
     }
