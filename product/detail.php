@@ -8,7 +8,7 @@ if ($_GET['id']) {
 }
 
 ?>
-<div class="container " style="margin-top: 146px;">
+<div class="container " style="margin-top: 146px; height: 590px;">
     <div class="card">
         <div class="container-fliud">
             <div class="wrapper row">
@@ -34,18 +34,24 @@ if ($_GET['id']) {
                 <div class="details col-md-6">
                     <h3 class="product-title"><?= $select_course['name'] ?></h3>
                     <p class="product-description"><?= $select_course['description'] ?></p>
-                    <p class="vote">Phân loại: <strong></strong></p>
-
                     <div class="rating">
                         <div class="stars">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
                         </div>
                         <span class="review-no">41 đánh giá</span>
                     </div>
+                    <?php
+                    $query_name = mysqli_query($conn, "SELECT ct.category_name
+                    FROM category ct, courses c
+                    WHERE ct.id = c.category_id AND c.category_id =" . $select_course['category_id']);
+                    $fetch = mysqli_fetch_array($query_name);
+                    ?>
+                    <p class="vote">Phân loại: <strong><?= $fetch['category_name'] ?> </strong></p>
+
                     <p class="vote"><strong>91%</strong> người mua thích khóa học này</p>
                     <h4 class="price">Giá khóa học: <span><?= $select_course['price'] ?>VNĐ</span></h4>
                     <div class="action">

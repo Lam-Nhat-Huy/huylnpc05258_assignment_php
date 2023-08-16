@@ -38,7 +38,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="">Giá: </label>
-                        <input type="text" class="form-control" name="price" required>
+                        <input type="number" min="0" class="form-control" name="price" required>
                         <div class="invalid-feedback">
                             Giá không không được để trống.
                         </div>

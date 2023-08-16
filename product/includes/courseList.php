@@ -2,6 +2,7 @@
     <h3 class="font-weigh">Danh sách khóa học</h3>
 </div>
 <div class="container-fluid course-list d-flex justify-content-evenly flex-dec flex-wrap mt-5">
+
     <?php
     $query_course = mysqli_query($conn, "SELECT * FROM courses ");
     if (mysqli_num_rows($query_course) > 0) {
