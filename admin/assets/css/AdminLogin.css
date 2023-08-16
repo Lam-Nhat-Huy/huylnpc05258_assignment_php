@@ -73,8 +73,9 @@ body {
 }
 
 .btn {
-  background-color: #cb0c9f;
+  background-color: #cb0c9f !important;
   margin-top: 10px;
+  border: none !important;
 }
 
 .delete-btn {
@@ -101,6 +102,9 @@ body {
   padding: 20px;
   text-align: center;
   background-color: #fff;
+}
+.inthihi {
+  color: #000 !important;
 }
 
 .form-container form h3 {

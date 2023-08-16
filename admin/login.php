@@ -13,8 +13,9 @@
         </div>
         <input type="submit" name="loginUser" class="btn btn-primary" value="Đăng Nhập">
         <p>Bạn chưa có tài khoản? <a href="register.php">Đăng kí</a></p>
-        <a href="">Quên mật khẩu</a>
+        <a href="" class="inthihi">Quên mật khẩu</a>
     </form>
+
 
 </div>
 <?php include('./includes/FooterAdminLogin.php'); ?>
